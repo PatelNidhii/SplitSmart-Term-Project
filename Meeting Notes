@@ -1,0 +1,70 @@
+Video Streaming - Server Team 1
+
+Date of Meeting:  	05/09/2023
+Minutes Prepared By: 	Nidhi Patel
+
+1. Purpose of Meeting
+	Member Introductions
+	Project Overview
+	Discuss who will be going what in the project
+	Discuss future meeting schedule
+	Collect questions about project for future discussion
+
+2. Attendance at Meeting 
+    Name	                   Team
+ Nidhi Patel	            Server Team
+ Ahmed	                  Server Team
+ Elishbah	                Server Team
+ Zan	                    Server Team
+ Mela	                    Server Team
+
+3. Meeting Notes, Decisions, Issues 
+	
+•	Team introduced themselves and discussed relevant programming experience. 
+We determined that most members have sufficient Java experience to make that the main programming language choice.
+The group also has some C experience which may be valuable if efficiency becomes an issue with the project implementation.   
+•	Team went over the projects and determined that there were a number of unanswered questions. 
+Team decided to collect all the questions for the purpose of getting clarification from the professor. 
+•	Team discussed who would be the note taker and who would upload the notes. It was decided that Tom would do this.
+o	It was also decided that Tom would send the meeting notes to everyone this week before uploading to VLT. 
+Team members would like to add questions for the professor to this document.
+o	The final meeting notes will be uploaded Sunday at 8pm.
+•	Team discussed the meeting structure for the term. It was decided that we would schedule a regular meeting for Friday from 6-8pm throughout the term. The weekends would be reserved for any additional meetings that are needed for the project.
+o	This decision is tentative pending Theo’s availability.
+o	Team decided that all agenda items would be collected at 8pm the day before the next meeting (Thursday).
+o	Team decided that we should put all important dates into a calendar. Google calendar was chosen and it was decided that Patrice would create and maintain that calendar.  
+o	The team decided that deliverables should be finished as early as one week before the due date to allow team members and other teams to review and test our products. This is important to our team specifically because the other teams will depending on our product.
+•	The subject of the first presentation brought up many questions for which we need clarification of Professor. It was decided that the next meeting is when we will decide who will be the first presenter for the 10/02 presentation.
+o	It was also discussed that we should prepare as much of this presentation/document as possible for next’s week meeting as the presentation is due in two weeks.
+o	Once we get more information from Prof., we will decide how to split up tasks for first deliverable
+
+3. Open Questions, Tabled Items, Outstanding Issues
+•	Questions related to first deliverable (10/2)
+o	Does Prof. have a more detailed description of first deliverable? It was discussed that a template document, similar to the meeting notes template, would be helpful.
+	What is an example of team structure for this deliverable? It was stated in the project overview document that we would need to state team structure, what are the possible roles that a team could have for this structure?
+	What is a CM Plan? 
+	Do you have examples of a Risk Management Plan and a Test Release plan?
+o	Does our team need two communicators seeing as our team has to communicate with 4 other teams (2 web teams and 2 client teams)?
+•	Future Implementation Questions
+o	Where will the Ubuntu server be hosted? On a remote server? Personal machine? What should the performance requirements be for this machine?
+o	Does the web team have its own separate web server?
+o	Does the web team store the video or does the server team? If the server team, how and where do we store the video?
+o	Do we need to setup Version Control for source code? If so, what software (SVN, GitHub, CVS, Google Project, BitBucket, etc.)? Do we need to set this up ourselves?
+o	Do we need an integration environment?
+o	What will be the test and release process?
+o	Can we use Doors (project management software)?
+o	32bit or 64bit version of server software?
+
+4. Action Items  
+Action	Assigned to	Due Date	Status
+Upload Meeting Notes and solicit questions about first deliverable 	Tom	9/23/20 (8pm)	In Progress
+Team members read Adobe RTMP, Red5.0, ffmpeg documentation	All	9/29/20	In Progress
+Team members download, install, and set up Enterprise Architect on local machine	All	9/29/20	In Progress
+Collect agenda items for next meeting	All	9/28/20(8pm)	In Progress
+Set up Google Calendar for important dates	Patrice	9/29/20	Open
+Determine responsibilities for first deliverable 	All	9/29/20	Open, pending professor’s answers to project questions
+
+5. Next Meeting
+Target Date:  	9/29/2020	Time:  	6PM	Location:  	University Center Building/Skype
+Objectives:  	•	Prepare first deliverable for 10/2
+
