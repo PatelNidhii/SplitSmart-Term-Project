@@ -12,11 +12,11 @@ Minutes Prepared By: 	Nidhi Patel
 
 2. Attendance at Meeting 
     Name	                   Team
- Nidhi Patel	                Server Team
- Ahmed	                        Server Team
- Elishbah	                Server Team
- Zan	                        Server Team
- Mela	                        Server Team
+ Nidhi Patel	             Server Team
+ Ahmed Alfaris                 Server Team
+ Elishbah Younus               Server Team
+ Zan Peracha                   Server Team
+ Mela	                         Server Team
 
 3. Meeting Notes, Decisions, Issues 
 	
@@ -25,9 +25,14 @@ Minutes Prepared By: 	Nidhi Patel
 •  Team discussed who would be the note taker and who would upload the notes.
 o  It was decided that we would schedule a regular meeting for Wednesday at 6pm throughout the term. 
    The weekends would be reserved for any additional meetings that are needed for the project.
-•  Once we get more information from Prof., we will decide how to split up tasks											-07/31  10 pts
+•  Once we get more information from Prof., we will decide how to split up tasks
 
-4. Next Meeting
+4. Action Items
+
+•  Submit meeting minutes for meeting 1
+•  Familiarize ourselves with the project and come up with some points of discussion for the next meeting.
+
+5. Next Meeting
 Target Date:  	5/17/2023	Time:  	6PM	Location:  	Zoom
 	
 
