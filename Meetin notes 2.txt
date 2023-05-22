@@ -1,0 +1,36 @@
+Video Streaming - Server Team 1
+
+Date of Meeting:  	05/17/2023
+Minutes Prepared By: 	Zan Peracha
+
+1. Purpose of Meeting
+	Discussing goals for term project
+	Project Overview
+	Distributing responsibilities throughout project
+	Collect questions about project for future discussion
+
+2. Attendance at Meeting 
+    Name	                   Team
+ Nidhi Patel	             Server Team
+ Ahmed Alfaris                 Server Team
+ Elishbah Younus               Server Team
+ Zan Peracha                   Server Team
+ Mela	                         Server Team
+
+3. Meeting Notes, Decisions, Issues 
+	
+•  The team discussed requirements for the project    
+•  Discussed the timeline for the project
+•  Discussed strengths of team members and preferred programming language
+•  Worked on planning document
+
+
+4. Action Items
+
+•  Submit meeting minutes for meeting 2
+•  Work on planning document throughout the week and meet back next week to review the results
+
+5. Next Meeting
+Target Date:  	5/24/2023	Time:  	6PM	Location:  	Zoom
+	
+
