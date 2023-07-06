@@ -1,0 +1,34 @@
+Video Streaming - Server Team 1
+
+Date of Meeting:  	06/21/2023
+Minutes Prepared By: 	Nidhi Patel
+
+1. Purpose of Meeting
+	
+  Discuss software architecture document
+  Went over architecture document, discussed plan for our software
+  Have inperson meeting nextweek
+
+2. Attendance at Meeting 
+ 
+ Name	                         Team
+ Nidhi Patel	               Requirements and planning team
+ Ahmed Alfaris                 Development team
+ Elishbah Younus               Development team
+ Zan Peracha                   Development team
+ Pamela	                       Project management/organizer
+
+3. Meeting Notes, Decisions, Issues 
+	
+•  The team discussed software architecture document information 
+•  Discussed the timeline for the project
+•  Organize into teams based on skills and availability
+
+4. Action Items
+
+•  Submit meeting notes
+•  Become familiar with architecture document and pick sections for next meeting
+  
+
+5. Next Meeting
+Target Date: 06/28/23	Time: not sure	Location: Campus
