@@ -1,0 +1,91 @@
+import java.util.*;
+
+class User {
+    private int userId;
+    private String username;
+    private String email;
+    private String password;
+}
+
+class Group {
+    private int groupId;
+    private String groupName;
+    private List<User> members;
+}
+
+class Expense {
+    private int expenseId;
+    private String description;
+    private double amount;
+    private Date date;
+    private String sharedManner;
+    private List<User> involvedUsers;
+    private String receiptImage;
+}
+
+interface ExpenseApproval {
+    void approveExpense(Expense expense);
+    void rejectExpense(Expense expense);
+}
+
+class NotificationService {
+    public void sendNotification(User user, String message) {
+    }
+}
+
+class BalanceTracker {
+    private Map<User, Map<User, Double>> balances;
+
+    public BalanceTracker() {
+        balances = new HashMap<>();
+    }
+
+    public void updateBalance(Expense expense) {
+    }
+
+    public double getBalance(User user1, User user2) {
+        // Implementation to get the balance owed by user1 to user2
+        return balances.getOrDefault(user1, new HashMap<>()).getOrDefault(user2, 0.0);
+    }
+}
+
+class PaymentTracker {
+    public void recordPayment(User payer, User payee, double amount) {
+        // Implementation to record the payment and update the balances
+    }
+}
+
+class ExpenseReport {
+    public void generateExpenseReport(User user, Date startDate, Date endDate) {
+        // Implementation to generate the expense report for the specified user and date range
+    }
+}
+
+class SplitSmartApp implements ExpenseApproval {
+    private List<User> users;
+    private List<Group> groups;
+    private List<Expense> expenses;
+    private NotificationService notificationService;
+    private BalanceTracker balanceTracker;
+    private PaymentTracker paymentTracker;
+    private ExpenseReport expenseReport;
+
+    // Constructor and methods to handle user login, group creation, expense creation,
+    // expense approval, payment recording, generating reports, etc.
+    @Override
+    public void approveExpense(Expense expense) {
+        // Implementation to approve the expense
+    }
+
+    @Override
+    public void rejectExpense(Expense expense) {
+        // Implementation to reject the expense
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SplitSmartApp splitSmartApp = new SplitSmartApp();
+        // Application logic and user interactions
+    }
+}
