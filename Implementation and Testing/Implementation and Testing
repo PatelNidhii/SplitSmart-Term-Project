@@ -69,9 +69,41 @@ class SplitSmartApp implements ExpenseApproval {
     private BalanceTracker balanceTracker;
     private PaymentTracker paymentTracker;
     private ExpenseReport expenseReport;
+    private User loggedInUser;
 
-    // Constructor and methods to handle user login, group creation, expense creation,
-    // expense approval, payment recording, generating reports, etc.
+    public SplitSmartApp() {
+        users = new ArrayList<>();
+        groups = new ArrayList<>();
+        expenses = new ArrayList<>();
+        notificationService = new NotificationService();
+        balanceTracker = new BalanceTracker();
+        paymentTracker = new PaymentTracker();
+        expenseReport = new ExpenseReport();
+    }
+    public boolean login(String username, String password) {
+        for (User user : users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                loggedInUser = user;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Method to handle group creation
+    public void createGroup(String groupName, List<User> members) {
+        Group newGroup = new Group(groupName, members);
+        groups.add(newGroup);
+    }
+
+    // Method to handle expense creation
+    public void createExpense(String description, double amount, Date date, String sharedManner, List<User> involvedUsers, String receiptImage) 
+{
+        Expense newExpense = new Expense(description, amount, date, sharedManner, involvedUsers, receiptImage);
+        expenses.add(newExpense);
+        balanceTracker.updateBalance(newExpense);
+    }
+
     @Override
     public void approveExpense(Expense expense) {
         // Implementation to approve the expense
@@ -82,10 +114,36 @@ class SplitSmartApp implements ExpenseApproval {
         // Implementation to reject the expense
     }
 }
+    private boolean isValidUsernameAndPassword(String username, String password) {
+        return true;
+    }
+    private boolean isValidGroup(String groupName, List<User> members) {
+        return true;
+    }
+    private boolean isValidExpense(String description, double amount, Date date, String sharedManner, List<User> involvedUsers, String receiptImage)
+{
+        return true;
+    }
 
-public class Main {
-    public static void main(String[] args) {
+public static void main(String[] args) {
         SplitSmartApp splitSmartApp = new SplitSmartApp();
+
         // Application logic and user interactions
+        // Example usage:
+        Scanner scanner = new Scanner(System.in);
+
+        // User login
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+
+        if (splitSmartApp.login(username, password)) {
+            System.out.println("Login successful!");
+            // Now the loggedInUser field will be set to the logged-in user.
+            // You can perform other operations like group creation, expense creation, etc.
+        } else {
+            System.out.println("Invalid username or password. Login failed.");
+        }
     }
 }
