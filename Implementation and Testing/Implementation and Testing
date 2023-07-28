@@ -5,12 +5,33 @@ class User {
     private String username;
     private String email;
     private String password;
+    
+    public User(int userId, String username, String email, String password) {
+        this.userId = userId;
+        this.username = username;
+        this.email = email;
+        this.password = password;
 }
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+
 
 class Group {
     private int groupId;
     private String groupName;
     private List<User> members;
+    
+    public Group(int groupId, String groupName, List<User> members) {
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.members = members;
+    }
 }
 
 class Expense {
@@ -21,6 +42,16 @@ class Expense {
     private String sharedManner;
     private List<User> involvedUsers;
     private String receiptImage;
+
+    public Expense(int expenseId, String description, double amount, Date date, String sharedManner, List<User> involvedUsers, String receiptImage) {
+        this.expenseId = expenseId;
+        this.description = description;
+        this.amount = amount;
+        this.date = date;
+        this.sharedManner = sharedManner;
+        this.involvedUsers = involvedUsers;
+        this.receiptImage = receiptImage;
+}
 }
 
 interface ExpenseApproval {
