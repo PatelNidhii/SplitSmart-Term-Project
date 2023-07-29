@@ -51,7 +51,7 @@ class Expense {
         this.sharedManner = sharedManner;
         this.involvedUsers = involvedUsers;
         this.receiptImage = receiptImage;
-}
+    }
 }
 
 interface ExpenseApproval {
@@ -61,6 +61,7 @@ interface ExpenseApproval {
 
 class NotificationService {
     public void sendNotification(User user, String message) {
+        
     }
 }
 
@@ -83,12 +84,16 @@ class BalanceTracker {
 class PaymentTracker {
     public void recordPayment(User payer, User payee, double amount) {
         // Implementation to record the payment and update the balances
+        balanceTracker = new BalanceTracker;
+        
+        
     }
 }
 
 class ExpenseReport {
     public void generateExpenseReport(User user, Date startDate, Date endDate) {
         // Implementation to generate the expense report for the specified user and date range
+        
     }
 }
 
@@ -129,7 +134,7 @@ class SplitSmartApp implements ExpenseApproval {
 
     // Method to handle expense creation
     public void createExpense(String description, double amount, Date date, String sharedManner, List<User> involvedUsers, String receiptImage) 
-{
+    {
         Expense newExpense = new Expense(description, amount, date, sharedManner, involvedUsers, receiptImage);
         expenses.add(newExpense);
         balanceTracker.updateBalance(newExpense);
@@ -152,7 +157,7 @@ class SplitSmartApp implements ExpenseApproval {
         return true;
     }
     private boolean isValidExpense(String description, double amount, Date date, String sharedManner, List<User> involvedUsers, String receiptImage)
-{
+    {
         return true;
     }
 
@@ -173,6 +178,40 @@ public static void main(String[] args) {
             System.out.println("Login successful!");
             // Now the loggedInUser field will be set to the logged-in user.
             // You can perform other operations like group creation, expense creation, etc.
+
+            // Need to implement how the user will select an action
+
+            // To create a new group:
+            System.out.print("Group name: ");
+            String groupName = scanner.nextLine();
+            System.out.print("Group members: ");
+            // how will the user select group members to be added?
+
+
+            // New Expense
+
+            System.out.print("Expense description: ");
+            String expenseDesc = scanner.nextLine();
+
+            System.out.print("Expense amount: ")
+            double expenseAmount = scanner.nextLine();
+
+            Date expenseDate = new Date();
+
+            // only shared manner implemented is equal
+            String expenseSharedManner = "equal";
+
+            int numUsers = 0;
+            System.out.print("Number of users: ")
+            numUsers = scanner.nextLine();
+            // Figure out how to add the users to the list
+            List<User> involvedUsers;
+
+            String expenseReceiptImage = "";
+            splitSmartApp.createExpense(expenseDesc, expenseAmount, expenseDate, expenseSharedManner, involvedUsers, expenseReceiptImage);
+
+            // End: New Expense
+
         } else {
             System.out.println("Invalid username or password. Login failed.");
         }
