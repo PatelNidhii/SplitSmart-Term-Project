@@ -85,7 +85,7 @@ class PaymentTracker {
     public void recordPayment(User payer, User payee, double amount) {
         // Implementation to record the payment and update the balances
         balanceTracker = new BalanceTracker;
-        
+
         
     }
 }
@@ -143,11 +143,13 @@ class SplitSmartApp implements ExpenseApproval {
     @Override
     public void approveExpense(Expense expense) {
         // Implementation to approve the expense
+        System.out.print("Expense Approved!");
     }
 
     @Override
     public void rejectExpense(Expense expense) {
         // Implementation to reject the expense
+        System.out.print("Expense rejected!");
     }
 }
     private boolean isValidUsernameAndPassword(String username, String password) {
@@ -181,12 +183,16 @@ public static void main(String[] args) {
 
             // Need to implement how the user will select an action
 
-            // To create a new group:
+            // New Group:
+
             System.out.print("Group name: ");
             String groupName = scanner.nextLine();
             System.out.print("Group members: ");
             // how will the user select group members to be added?
 
+            Group newGroup = new Group();
+
+            // End: New Group
 
             // New Expense
 
@@ -205,8 +211,14 @@ public static void main(String[] args) {
             System.out.print("Number of users: ")
             numUsers = scanner.nextLine();
             // Figure out how to add the users to the list
-            List<User> involvedUsers;
-
+            List<User> involvedUsers = new List<User>;
+            for (int i = 0; i < numUsers; i++)
+            {
+                involvedUsers.add();
+                System.out.print("Name of user " (i + 1));
+                involvedUsers[i].username = scanner.nextLine();
+            }
+                
             String expenseReceiptImage = "";
             splitSmartApp.createExpense(expenseDesc, expenseAmount, expenseDate, expenseSharedManner, involvedUsers, expenseReceiptImage);
 
