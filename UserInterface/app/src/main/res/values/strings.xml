@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application2</string>
+    <string name="welcome_to_splitsmart">Welcome to SplitSmart</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="welcome">Welcome</string>
+    <string name="username_here">username here</string>
+    <string name="reports">Reports</string>
+    <string name="textview">TextView</string>
+    <string name="groups">Groups</string>
+</resources>
