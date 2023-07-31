@@ -11,7 +11,17 @@ class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.allowEmailNotifications = true;
 }
+ public boolean isAllowEmailNotifications() {
+        return allowEmailNotifications;
+    }
+
+    public void setAllowEmailNotifications(boolean allowEmailNotifications) {
+        this.allowEmailNotifications = allowEmailNotifications;
+    }
+}
+
     public String getUsername() {
         return username;
     }
@@ -61,15 +71,26 @@ interface ExpenseApproval {
 
 class NotificationService {
     public void sendNotification(User user, String message) {
-        
+        if (user.isAllowEmailNotifications()) {
+            System.out.println("Sending email notification to user: " + user.getUsername() + ", Message: " + message);
+        } else {
+            System.out.println("Sending notification to user: " + user.getUsername() + ", Message: " + message);
+        }
     }
 }
 
 class BalanceTracker {
     private Map<User, Map<User, Double>> balances;
+    private NotificationService notificationService;
 
     public BalanceTracker() {
         balances = new HashMap<>();
+        notificationService = new NotificationService();
+    }
+private void notifyBalanceUpdate(User payer, User payee, double amount) {
+        String message = "Payment recorded: " + payer.getUsername() + " paid " + amount + " to " + payee.getUsername();
+        notificationService.sendNotification(payer, message);
+        notificationService.sendNotification(payee, message);
     }
 
     public void updateBalance(Expense expense) {
@@ -81,14 +102,29 @@ class BalanceTracker {
     }
 }
 
-class PaymentTracker {
-    public void recordPayment(User payer, User payee, double amount) {
+public class PaymentTracker {
+    private double amount;
+    private double balance;
+
+public PaymentTracker(double amount, double balance) {
+this.amount = amount;
+this.balance = balance;
+}
+public double getAmount() {
+return amount;
+}
+public double getBalance() {
+return balance;
+}
+public void recordPayment() {
+balance -= amount;
+}
         // Implementation to record the payment and update the balances
-        balanceTracker = new BalanceTracker;
+        
 
         
     }
-}
+
 
 class ExpenseReport {
     public void generateExpenseReport(User user, Date startDate, Date endDate) {
@@ -115,7 +151,15 @@ class SplitSmartApp implements ExpenseApproval {
         balanceTracker = new BalanceTracker();
         paymentTracker = new PaymentTracker();
         expenseReport = new ExpenseReport();
+        nextUserId = 1;
     }
+    public void signUp(String username, String email, String password) {
+        // Perform validation and create a new user object
+        User newUser = new User(nextUserId++, username, email, password);
+        users.add(newUser);
+        System.out.println("Sign-up successful for user: " + newUser.getUsername());
+    }
+
     public boolean login(String username, String password) {
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
@@ -165,26 +209,26 @@ class SplitSmartApp implements ExpenseApproval {
 
 public static void main(String[] args) {
         SplitSmartApp splitSmartApp = new SplitSmartApp();
-
-        // Application logic and user interactions
-        // Example usage:
         Scanner scanner = new Scanner(System.in);
-
-        // User login
+        
+        // User sign-up
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
+        splitSmartApp.signUp(username, email, password);
 
+         // User login
+        System.out.print("Enter username: ");
+        username = scanner.nextLine();
+        System.out.print("Enter password: ");
+        password = scanner.nextLine();
         if (splitSmartApp.login(username, password)) {
             System.out.println("Login successful!");
             // Now the loggedInUser field will be set to the logged-in user.
             // You can perform other operations like group creation, expense creation, etc.
-
-            // Need to implement how the user will select an action
-
-            // New Group:
-
             System.out.print("Group name: ");
             String groupName = scanner.nextLine();
             System.out.print("Group members: ");
